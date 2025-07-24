@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Y3Q2RVQM6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8Y3Q2RVQM6');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>AI therapist</title>
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script-->
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script
+      data-cookie-notice='{ 
+        "learnMoreLinkEnabled": true,
+        "learnMoreLinkHref": "/privacy.html",
+        "messageLocales": {
+        },
+      }'
+      src="cookie.notice.js">
+    </script>
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!--icons-->
+    <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"-->
+    
+    <!--custom stylesheet-->
+    <!--link rel="stylesheet" href="style.css" /-->
+    <style type="text/css">
+      :root{
+        --gray100: #F6F7F9;
+        --gray200: #E9ECEF;
+        --gray300: #DEE2E6;
+        --gray900: #383838;
+      }
+      body {
+        font-family: 'Lato', sans-serif !important;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+      }
+      .benefit {
+        margin: 2em 0;
+      }
+      .explain {
+        margin: 2em 0 0 0;
+      }
+
+      /* Custom Type */
+      h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height-: 6.5rem;
+        color: var(--gray900);
+      }
+      h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 4.5rem;
+        color: var(--gray900);
+      }
+      p, ul {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.875rem;
+        color: var(--gray900);
+        letter-spacing: 0.015rem;
+      }
+      a {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.875rem;
+        letter-spacing: 0.015rem;
+      }
+
+      /* Custom Buttons */
+      .btn-lg {
+        padding-inline: 3rem;
+        font-size: 1.25rem;
+      }
+
+      /* https://stackoverflow.com/questions/35814653/automatic-height-when-embedding-a-youtube-video */
+      /*.video-container {
+        position: relative;
+        padding-bottom: 1%;
+        height: 0;
+        margin: 5em 0 0 0;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }*/
+      .btn {
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      #therapy-video, #demo-img {
+        margin: 3em 0 0 0;
+      }
+      #therapy-video-caption {
+        margin: 0 0 3em 0;
+      }
+
+      #typed_element {
+        background: gold;
+        border-radius: 20px;
+        padding: 0px 20px 10px 20px;
+        font-size: 0.95em;
+      }
+      .text-left {
+        text-align: left;
+      }
+
+      /* mobile width queries*/
+      @media screen and (max-width: 640px) { 
+        .container {
+          padding-top: 10vh;
+          padding-bottom: 10vh;
+        }
+        .video-container {
+          margin: 3em 0 0em;
+        }
+        h1 {
+          font-size: 2.2rem;
+          line-height: 2.8rem;
+        }
+        h2 {
+          font-size: 1.8rem;
+          line-height: 2.5rem;
+        }
+        p, a, ul { 
+          font-size: 1.125rem;
+          line-height: 1.7rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col col-lg-8 offset-lg-2 col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-10 offset-1">
+          <h1>AI&nbsp;therapist<br><span id="typed_element"></span></h1>
+        </div>
+        <div class="col col-lg-6 offset-lg-3 col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-10 offset-1">
+          <p class="benefit">Chatbot controlled by AI and supervised by real psychotherapists, created for a long-term individual psychotherapy in a situations where offline or online therapy is not an option</p>
+
+          <a type="button" class="btn btn-primary btn-lg" href="https://forms.yandex.ru/u/6880d1254936390f187d9483" target="_blank">Register</a> 
+        </div>
+
+        <div class="col-lg-10 offset-lg-1">
+          <!--div class="video-container"-->
+            <video id="therapy-video" controls width="100%" style="background: lightgray; border: 1px solid lightgray; padding: 0; border-radius: 10px;">
+              <source id="therapy-video-source" src="https://www.dropbox.com/scl/fi/bxbcfzxn4n7btqoqfy52b/3-min-therapy-ru.mp4?rlkey=8wtu22f0hedr8tt89bd18vxei&raw=1" type="video/mp4" />
+            </video>
+            
+          <!--/div-->
+          <p id="therapy-video-caption" style="font-size-: 1em; color: darkgray; margin-bottom: 3em;">
+            This video shows how the AI psychotherapist begins, conducts, and ends a short 3-minute demo session — including how it responds when prompted to give life advice.
+          </p>
+        </div>
+
+        <div class="col col-lg-6 offset-lg-3 col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-10 offset-1">
+          <h2>Who is this for</h2>
+          <p class="text-left" style="margin: 1em 0;">    
+            A core element of long-term individual therapy is the <i>setting</i> — a clear agreement between client and therapist about when, where, and how the work happens. That includes the time and frequency of sessions, duration, payment, and the ethical and technical boundaries that create safety and structure.
+          </p>
+          <p class="text-left" style="margin-bottom: 0.2em;">    But in real life, many people find themselves in situations where a stable therapy setting simply isn’t possible. They may not be able to:
+            <ul class="text-left">
+              <li>consistently carve out a full hour just for themselves,</li>
+              <li>speak out loud or join a video call,</li>
+              <li>ensure they won’t be interrupted or overheard,</li>
+              <li>commit financially to ongoing therapy,</li>
+              <li>or even know when they’ll next be free.</li>
+            </ul>
+          </p>
+          <p class="text-left" style="margin-bottom: 0.2em;">This includes, for example:
+            <ul class="text-left">
+              <li>new mothers caring for infants,</li>
+              <li>sailors on months-long voyages at sea,</li>
+              <li>oil rig workers with unpredictable shifts,</li>
+              <li>students living in shared dorms,</li>
+              <li>pilots and flight attendants constantly changing time zones,</li>
+              <li>and many others.</li>
+            </ul>
+          </p>
+          <p class="text-left" style="margin: 0 0 2em 0">    They often need support — but don’t have access to traditional therapy formats. That’s why we built this one. </p>
+        </div>
+
+        <div class="col col-lg-6 offset-lg-3 col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-10 offset-1">
+          <h2>About supervision</h2>
+          <p class="text-left" style="margin: 1em 0 2em 0;">
+                Today, many people experiment with using generative AI chat models (like ChatGPT) for therapeutic conversations. But these general-purpose models are trained on broad internet data, not on the principles or structure of real psychotherapy.
+          </p>
+          <p class="text-left">    Without careful design and oversight, these chats can be misleading or even harmful, especially when someone is vulnerable and looking for real support.</p>
+          </p>
+          
+          <img style="width: 100%; max-width: 400px; margin: 2em 0;" src="https://www.dropbox.com/scl/fi/bx7gojg0bu2b8pxosdjs1/trends-2025.jpg?rlkey=zfqhpfdkbu5ulsj7ccnwyznl3&raw=1">
+          
+          <p class="text-left">    That’s why we’re building something different.</p>
+          <p class="text-left">    Our chatbot is trained specifically for therapeutic interaction — with a focus on empathy, safety, and psychological depth. And it doesn’t operate alone: all conversations and improvements are regularly supervised by professional psychologists.</p>
+          <p class="text-left">    Supervision ensures that the AI stays grounded in real therapeutic values — and that the support you receive is as responsible as it is accessible.</p>
+          <br>
+          <a type="button" class="btn btn-primary btn-lg" href="https://forms.yandex.ru/u/6880d1254936390f187d9483" target="_blank">Register</a> 
+        </div>
+        
+        <div style="margin-top: 4em;" class="col col-lg-6 offset-lg-3 col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-10 offset-1">
+          <h2>Contacts</h2>
+           <a href="mailto:alexeyhimself@gmail.com">alexeyhimself@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var target_audience = ['for moms of newborns', 'for seafarers', 'for students', 'for nurses', 'for paramedics', 'for long-haul drivers', 'for pilots', 'for single mothers', 'for shift workers', ];
+    function update_video() {
+      var mobileSrc = "https://www.dropbox.com/scl/fi/n57njnj7fdjaw4h0jbsis/multilang-therapy.mp4?rlkey=aaawbb7xmaz3w00za88ccgg0m&e=1&raw=1"; // placeholder mobile video URL
+      var desktopSrc = "https://www.dropbox.com/scl/fi/bxbcfzxn4n7btqoqfy52b/3-min-therapy-ru.mp4?rlkey=8wtu22f0hedr8tt89bd18vxei&raw=1";
+      var video = document.getElementById('therapy-video');
+      var source = document.getElementById('therapy-video-source');
+      var caption = document.getElementById('therapy-video-caption');
+      var desktopCaption = "This video demonstrates how the AI psychologist starts, conducts, and ends a short 3-minute demonstration session, during which it is provoked to give life advice.";
+      var mobileCaption = "This video demonstrates how the AI psychologist can communicate in different languages.";
+      
+      if (window.innerHeight > window.innerWidth) {
+        if (source.src !== mobileSrc) {
+          source.src = mobileSrc;
+          video.load();
+        }
+        if (caption) caption.textContent = mobileCaption;
+      } else {
+        if (source.src !== desktopSrc) {
+          source.src = desktopSrc;
+          video.load();
+        }
+        if (caption) caption.textContent = desktopCaption;
+      }
+    }
+    function update_image() {
+      var mobileSrc = "https://www.dropbox.com/scl/fi/k26279nr00a0kfclhyuo8/AI-psychologist-mobile-ru.png?rlkey=pm3axomz5xwvntcqdan47us5l&raw=1";
+      var desktopSrc = "https://www.dropbox.com/scl/fi/qw7jaizij9lppoioe4sn7/AI-psychologist-mobile-en.mp4?rlkey=bf08lzr1ox2jn9dz36kvl4kiq&raw=1";
+      var img = document.getElementById('demo-img');
+
+      if (window.innerHeight > window.innerWidth) {
+        if (img.src !== mobileSrc) {
+          img.src = mobileSrc;
+          target_audience = ['for moms', 'for mariners', 'for students', 'for nurses', 'for pilots', ];
+        }
+      } else {
+        if (img.src !== desktopSrc) {
+          img.src = desktopSrc;
+        }
+      }
+    }
+    (function() {
+      function onload() {
+        update_video();
+
+        var typed = new Typed('#typed_element', {
+          strings: target_audience,  
+            // 'для ухаживающих за тяжелобольными'
+          typeSpeed: 70,
+          backDelay: 2800,
+          loop: true,
+          shuffle: true,
+        });
+      }
+      //window.addEventListener('resize', onload);
+      //window.addEventListener('orientationchange', onload);
+      document.addEventListener('DOMContentLoaded', onload);
+    })();
+  </script>
+</html>
